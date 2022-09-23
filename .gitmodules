@@ -1,0 +1,3 @@
+[submodule "team-repo"]
+	path = team-repo
+	url = https://github.com/nkarl/wsu.cpts415.project
