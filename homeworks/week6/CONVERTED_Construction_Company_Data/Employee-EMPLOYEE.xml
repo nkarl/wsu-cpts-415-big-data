@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+        <!ELEMENT root (row)*>
+        <!ELEMENT row (EMP_NUM|EMP_LNAME|EMP_FNAME|EMP_INITIAL|EMP_HIREDATE)*>
+        <!ELEMENT EMP_NUM (#PCDATA)>
+        <!ELEMENT EMP_LNAME (#PCDATA)>
+        <!ELEMENT EMP_FNAME (#PCDATA)>
+        <!ELEMENT EMP_INITIAL (#PCDATA)>
+        <!ELEMENT EMP_HIREDATE (#PCDATA)>
+        ]>
+<root>
+  <row>
+    <EMP_NUM>101</EMP_NUM>
+    <EMP_LNAME>News</EMP_LNAME>
+    <EMP_FNAME>John</EMP_FNAME>
+    <EMP_INITIAL>G</EMP_INITIAL>
+    <EMP_HIREDATE>11/08/1998</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>102</EMP_NUM>
+    <EMP_LNAME>Senior</EMP_LNAME>
+    <EMP_FNAME>David</EMP_FNAME>
+    <EMP_INITIAL>H</EMP_INITIAL>
+    <EMP_HIREDATE>7/12/1987</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>103</EMP_NUM>
+    <EMP_LNAME>Arbough</EMP_LNAME>
+    <EMP_FNAME>June</EMP_FNAME>
+    <EMP_INITIAL>E</EMP_INITIAL>
+    <EMP_HIREDATE>12/1/1994</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>104</EMP_NUM>
+    <EMP_LNAME>Ramoras</EMP_LNAME>
+    <EMP_FNAME>Anne</EMP_FNAME>
+    <EMP_INITIAL>K</EMP_INITIAL>
+    <EMP_HIREDATE>11/15/1985</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>105</EMP_NUM>
+    <EMP_LNAME>Johnson</EMP_LNAME>
+    <EMP_FNAME>Alice</EMP_FNAME>
+    <EMP_INITIAL>K</EMP_INITIAL>
+    <EMP_HIREDATE>2/1/1991</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>106</EMP_NUM>
+    <EMP_LNAME>Smithfield</EMP_LNAME>
+    <EMP_FNAME>William</EMP_FNAME>
+    <EMP_INITIAL></EMP_INITIAL>
+    <EMP_HIREDATE>6/22/2003</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>112</EMP_NUM>
+    <EMP_LNAME>Smithson</EMP_LNAME>
+    <EMP_FNAME>Darlene</EMP_FNAME>
+    <EMP_INITIAL>M</EMP_INITIAL>
+    <EMP_HIREDATE>10/23/1992</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>114</EMP_NUM>
+    <EMP_LNAME>Jones</EMP_LNAME>
+    <EMP_FNAME>Annelise</EMP_FNAME>
+    <EMP_INITIAL></EMP_INITIAL>
+    <EMP_HIREDATE>8/20/1991</EMP_HIREDATE>
+  </row>
+  <row>
+    <EMP_NUM>118</EMP_NUM>
+    <EMP_LNAME>Frommer</EMP_LNAME>
+    <EMP_FNAME>James</EMP_FNAME>
+    <EMP_INITIAL>J</EMP_INITIAL>
+    <EMP_HIREDATE>1/4/2004</EMP_HIREDATE>
+  </row>
+</root>

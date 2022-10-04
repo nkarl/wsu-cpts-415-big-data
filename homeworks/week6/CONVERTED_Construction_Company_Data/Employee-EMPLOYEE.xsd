@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType"/>
+  <xs:complexType name="rowType">
+    <xs:sequence>
+      <xs:element name="EMP_NUM">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="101"/>
+            <xs:enumeration value="102"/>
+            <xs:enumeration value="103"/>
+            <xs:enumeration value="104"/>
+            <xs:enumeration value="105"/>
+            <xs:enumeration value="106"/>
+            <xs:enumeration value="112"/>
+            <xs:enumeration value="114"/>
+            <xs:enumeration value="118"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EMP_LNAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="News"/>
+            <xs:enumeration value="Senior"/>
+            <xs:enumeration value="Arbough"/>
+            <xs:enumeration value="Ramoras"/>
+            <xs:enumeration value="Johnson"/>
+            <xs:enumeration value="Smithfield"/>
+            <xs:enumeration value="Smithson"/>
+            <xs:enumeration value="Jones"/>
+            <xs:enumeration value="Frommer"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EMP_FNAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="John"/>
+            <xs:enumeration value="David"/>
+            <xs:enumeration value="June"/>
+            <xs:enumeration value="Anne"/>
+            <xs:enumeration value="Alice"/>
+            <xs:enumeration value="William"/>
+            <xs:enumeration value="Darlene"/>
+            <xs:enumeration value="Annelise"/>
+            <xs:enumeration value="James"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EMP_INITIAL">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="G"/>
+            <xs:enumeration value="H"/>
+            <xs:enumeration value="E"/>
+            <xs:enumeration value="K"/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="J"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EMP_HIREDATE">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="11/08/1998"/>
+            <xs:enumeration value="7/12/1987"/>
+            <xs:enumeration value="12/1/1994"/>
+            <xs:enumeration value="11/15/1985"/>
+            <xs:enumeration value="2/1/1991"/>
+            <xs:enumeration value="6/22/2003"/>
+            <xs:enumeration value="10/23/1992"/>
+            <xs:enumeration value="8/20/1991"/>
+            <xs:enumeration value="1/4/2004"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element type="rowType" name="row" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

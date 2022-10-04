@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType"/>
+  <xs:complexType name="rowType">
+    <xs:sequence>
+      <xs:element name="PROJ_NUM">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="18"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EMP_NUM">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="103"/>
+            <xs:enumeration value="101"/>
+            <xs:enumeration value="105"/>
+            <xs:enumeration value="106"/>
+            <xs:enumeration value="102"/>
+            <xs:enumeration value="114"/>
+            <xs:enumeration value="118"/>
+            <xs:enumeration value="104"/>
+            <xs:enumeration value="112"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="JOB_CLASS">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Electrical Engineer"/>
+            <xs:enumeration value="Database Designer"/>
+            <xs:enumeration value="Programmer"/>
+            <xs:enumeration value="Systems Analyst"/>
+            <xs:enumeration value="Applications Designer"/>
+            <xs:enumeration value="General Support"/>
+            <xs:enumeration value="DSS Analyst"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="CHG_HOUR">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="$84.50"/>
+            <xs:enumeration value="$105.00"/>
+            <xs:enumeration value="$35.75"/>
+            <xs:enumeration value="$96.75"/>
+            <xs:enumeration value="$48.10"/>
+            <xs:enumeration value="$18.36"/>
+            <xs:enumeration value="$45.95"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="HOURS">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="23.8"/>
+            <xs:enumeration value="19.4"/>
+            <xs:enumeration value="35.7"/>
+            <xs:enumeration value="12.6"/>
+            <xs:enumeration value="24.6"/>
+            <xs:enumeration value="45.3"/>
+            <xs:enumeration value="32.4"/>
+            <xs:enumeration value="44.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element type="rowType" name="row" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

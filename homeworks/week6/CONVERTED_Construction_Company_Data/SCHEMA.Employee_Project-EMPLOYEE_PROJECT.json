@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "root": {
+      "type": "object",
+      "properties": {
+        "row": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "JOB_CLASS": {
+                  "type": "string"
+                },
+                "CHG_HOUR": {
+                  "type": "string"
+                },
+                "HOURS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "EMP_NUM",
+                "JOB_CLASS",
+                "CHG_HOUR",
+                "HOURS"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "row"
+      ]
+    }
+  },
+  "required": [
+    "root"
+  ]
+}
+

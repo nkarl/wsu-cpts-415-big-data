@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "root": {
+      "type": "object",
+      "properties": {
+        "row": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "PROJ_NAME": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "PROJ_NAME"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "PROJ_NUM": {
+                  "type": "string"
+                },
+                "PROJ_NAME": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PROJ_NUM",
+                "PROJ_NAME"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "row"
+      ]
+    }
+  },
+  "required": [
+    "root"
+  ]
+}
+

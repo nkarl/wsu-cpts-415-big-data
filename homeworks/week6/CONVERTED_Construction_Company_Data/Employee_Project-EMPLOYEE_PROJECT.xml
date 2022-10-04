@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+        <!ELEMENT root (row)*>
+        <!ELEMENT row (PROJ_NUM|EMP_NUM|JOB_CLASS|CHG_HOUR|HOURS)*>
+        <!ELEMENT PROJ_NUM (#PCDATA)>
+        <!ELEMENT EMP_NUM (#PCDATA)>
+        <!ELEMENT JOB_CLASS (#PCDATA)>
+        <!ELEMENT CHG_HOUR (#PCDATA)>
+        <!ELEMENT HOURS (#PCDATA)>
+        ]>
+<root>
+  <row>
+    <PROJ_NUM>15</PROJ_NUM>
+    <EMP_NUM>103</EMP_NUM>
+    <JOB_CLASS>Electrical Engineer</JOB_CLASS>
+    <CHG_HOUR>$84.50</CHG_HOUR>
+    <HOURS>23.8</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>15</PROJ_NUM>
+    <EMP_NUM>101</EMP_NUM>
+    <JOB_CLASS>Database Designer</JOB_CLASS>
+    <CHG_HOUR>$105.00</CHG_HOUR>
+    <HOURS>19.4</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>15</PROJ_NUM>
+    <EMP_NUM>105</EMP_NUM>
+    <JOB_CLASS>Database Designer</JOB_CLASS>
+    <CHG_HOUR>$105.00</CHG_HOUR>
+    <HOURS>35.7</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>15</PROJ_NUM>
+    <EMP_NUM>106</EMP_NUM>
+    <JOB_CLASS>Programmer</JOB_CLASS>
+    <CHG_HOUR>$35.75</CHG_HOUR>
+    <HOURS>12.6</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>15</PROJ_NUM>
+    <EMP_NUM>102</EMP_NUM>
+    <JOB_CLASS>Systems Analyst</JOB_CLASS>
+    <CHG_HOUR>$96.75</CHG_HOUR>
+    <HOURS>23.8</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>18</PROJ_NUM>
+    <EMP_NUM>114</EMP_NUM>
+    <JOB_CLASS>Applications Designer</JOB_CLASS>
+    <CHG_HOUR>$48.10</CHG_HOUR>
+    <HOURS>24.6</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>18</PROJ_NUM>
+    <EMP_NUM>118</EMP_NUM>
+    <JOB_CLASS>General Support</JOB_CLASS>
+    <CHG_HOUR>$18.36</CHG_HOUR>
+    <HOURS>45.3</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>18</PROJ_NUM>
+    <EMP_NUM>104</EMP_NUM>
+    <JOB_CLASS>Systems Analyst</JOB_CLASS>
+    <CHG_HOUR>$96.75</CHG_HOUR>
+    <HOURS>32.4</HOURS>
+  </row>
+  <row>
+    <PROJ_NUM>18</PROJ_NUM>
+    <EMP_NUM>112</EMP_NUM>
+    <JOB_CLASS>DSS Analyst</JOB_CLASS>
+    <CHG_HOUR>$45.95</CHG_HOUR>
+    <HOURS>44.0</HOURS>
+  </row>
+</root>

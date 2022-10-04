@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "root": {
+      "type": "object",
+      "properties": {
+        "row": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "EMP_NUM": {
+                  "type": "string"
+                },
+                "EMP_LNAME": {
+                  "type": "string"
+                },
+                "EMP_FNAME": {
+                  "type": "string"
+                },
+                "EMP_INITIAL": {
+                  "type": "string"
+                },
+                "EMP_HIREDATE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "EMP_NUM",
+                "EMP_LNAME",
+                "EMP_FNAME",
+                "EMP_INITIAL",
+                "EMP_HIREDATE"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "row"
+      ]
+    }
+  },
+  "required": [
+    "root"
+  ]
+}
+

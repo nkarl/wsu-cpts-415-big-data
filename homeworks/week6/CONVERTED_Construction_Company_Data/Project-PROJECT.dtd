@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+        <!ELEMENT root (row)*>
+        <!ELEMENT row (PROJ_NUM|PROJ_NAME)*>
+        <!ELEMENT PROJ_NUM (#PCDATA)>
+        <!ELEMENT PROJ_NAME (#PCDATA)>
+        ]>
+<root>
+  <row>
+    <PROJ_NUM>15</PROJ_NUM>
+    <PROJ_NAME>Evergreen</PROJ_NAME>
+  </row>
+  <row>
+    <PROJ_NUM>18</PROJ_NUM>
+    <PROJ_NAME>Amber Wave</PROJ_NAME>
+  </row>
+</root>
