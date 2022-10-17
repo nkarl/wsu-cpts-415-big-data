@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="week6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CONVERTED_Construction_Company_Data.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Construction_Company_Data_Sample.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
