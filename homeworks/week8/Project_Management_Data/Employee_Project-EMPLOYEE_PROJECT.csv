@@ -1,0 +1,22 @@
+PROJ_NUM,PROJ_NAME,EMP_NUM,EMP_NAME,EMP_HIREDATE,JOB_CLASS,CHG_HOUR,HOURS
+15,Evergreen,103,June E. Arbough,12/1/1994,Electrical Engineer,$84.50,23.8
+15,Evergreen,101,John G. News,11/8/1998,Database Designer,$105.00,19.4
+15,Evergreen,105,Alice K. Johnson,2/1/1991,Database Designer,$105.00,35.7
+15,Evergreen,106,William Smithfield,6/22/2003,Programmer,$35.75,12.6
+15,Evergreen,102,David H. Senior,7/12/1987,Systems Analyst,$96.75,23.8
+18,Amber Wave,114,Annelise Jones,8/20/1991,Applications Designer,$48.10,24.6
+18,Amber Wave,118,James J. Frommer,1/4/2004,General Support,$18.36,45.3
+18,Amber Wave,104,Anne K. Ramoras,11/15/1985,Systems Analyst,$96.75,32.4
+18,Amber Wave,112,Darlene M. Smithson,10/23/1992,DSS Analyst,$45.95,44.0
+22,Rolling Tide,105,Alice K. Johnson,2/1/1991,Database Designer,$105.00,64.7
+22,Rolling Tide,104,Anne K. Ramoras,11/15/1985,Systems Analyst,$96.75,48.4
+22,Rolling Tide,113,Delbert K. Joenbrood,11/15/1994,Applications Designer,$48.10,23.6
+22,Rolling Tide,111,Geoff B. Wabash,4/4/1989,Clerical Support,$26.87,22.0
+22,Rolling Tide,106,William Smithfield,6/22/2003,Programmer,$35.75,12.8
+25,Starflight,107,Maria D. Alonzo,10/10/1991,Programmer,$35.75,24.6
+25,Starflight,115,Travis B. Bawangi,1/25/1990,Systems Analyst,$96.75,45.8
+25,Starflight,101,John G. News,11/8/1998,Database Designer,$105.00,56.3
+25,Starflight,114,Annelise Jones,8/20/1991,Applications Designer,$48.10,33.1
+25,Starflight,108,Ralph B. Washington,8/22/1989,Systems Analyst,$96.75,23.6
+25,Starflight,118,James J. Frommer,1/4/2004,General Support,$18.36,30.5
+25,Starflight,112,Darlene M. Smithson,10/23/1992,DSS Analyst,$45.95,41.4
