@@ -1,0 +1,60 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    >
+
+    <!--a human with BirthYear.-->
+    <rdfs:Class rdf:ID="human" rdf:BirthYear="&xs:Year" />
+
+    <!--a gender with alternative values.-->
+    <rdfs:Class rdf:ID="gender">
+        <rdfs:comment>
+            The class of gender roles.
+            All gender roles are humans.
+        </rdfs:comment>
+        <rdf:Alt>
+            <rdf:li rdf:resource="#male" />
+            <rdf:li rdf:resource="#female" />
+            <rdf:li rdf:resource="#non-binary" />
+        </rdf:Alt>
+        <rdfs:subClassOf rdf:resource="#human" />
+    </rdfs:Class>
+
+    <!--root property: actions.-->
+    <rdfs:Property rdf:ID="acts">
+        <rdfs:domain rdf:resource="human" />
+    </rdf:Property>
+
+    <!--has a gender.-->
+    <rdf:Property rdf:ID="hasGender">
+        <rdfs:range rdf:resource="#gender" />
+        <rdfs:subPropertyOf rdf:resource="acts" />
+    </rdf:Property>
+
+    <!--likes another human.-->
+    <rdf:Property rdf:ID="likes">
+        <rdfs:range rdf:resource="#human" />
+        <rdfs:subPropertyOf rdf:resource="acts" />
+    </rdf:Property>
+
+    <!--marries to another human.-->
+    <rdf:Property rdf:ID="isMarried">
+        <rdfs:range rdf:resource="#human" />
+        <rdfs:subPropertyOf rdf:resource="likes" />
+    </rdf:Property>
+
+    <!--relates by parental role.-->
+    <rdf:Property rdf:ID="relates">
+        <rdfs:range rdf:resource="#human" />
+        <rdfs:subPropertyOf rdf:resource="acts" />
+    </rdf:Property>
+
+    <rdf:Property rdf:ID="hasFather">
+        <rdfs:subPropertyOf rdf:resource="relates" />
+    </rdf:Property>
+
+    <rdf:Property rdf:ID="hasMother">
+        <rdfs:subPropertyOf rdf:resource="relates" />
+    </rdf:Property>
+
+</rdf:RDF>

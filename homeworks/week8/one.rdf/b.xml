@@ -1,0 +1,41 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    >
+
+    <!--John-->
+    <rdf:Description rdf:about="John" rdf:Class="human" rdf:BirthYear="1950">
+        <hasGender rdf:resource="male" />
+    </rdf:Description>
+
+    <!--Mary-->
+    <rdf:Description rdf:about="Mary" rdf:Class="human">
+        <hasGender rdf:resource="female" />
+        <isMarried rdf:resource="John" />
+    </rdf:Description>
+
+    
+    <!--Sophie, Sandra, Susan-->
+    <rdf:Bag rdf:Class="human" rdf:hasGender="female">
+        <rdf:li>
+            <rdf:Description rdf:about="Sophie" />
+        </rdf:li>
+        <rdf:li>
+            <rdf:Description rdf:about="Sandra" rdf:likes="Frank" />
+        </rdf:li>
+        <rdf:li>
+            <rdf:Description rdf:about="Susan" rdf:BirthYear="1978">
+                <rdf:hasFather rdf:resource="John" />
+            </rdf:Description>
+        </rdf:li>
+    </rdf:Bag>
+
+    <!--Frank-->
+    <rdf:Description rdf:about="John" rdf:Class="human" rdf:BirthYear="1980">
+        <rdf:hasGender rdf:resource="male" />
+        <rdf:hasFather rdf:resource="John" />
+        <rdf:hasMother rdf:resource="Mary" />
+        <rdf:likes rdf:resource="Sophie" />
+    </rdf:Description>
+
+</rdf:RDF>
