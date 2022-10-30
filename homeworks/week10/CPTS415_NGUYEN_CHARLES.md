@@ -6,6 +6,23 @@
 
 a. Amdahl's Law.
 
+$$Speedup = \frac{1}{f + \frac{1-f}{s}}$$
+
+where, $f=0.20$ is fraction of the sequential part and $s$ is the amount of parallel resources.
+
+Time costs:
+- 2 cores: $T_2=0.6T$
+- 4 cores: $T_4=0.4T$
+- 8 cores: $T_8=0.3T$
+
+Speedups: 
+- 2 cores: $S=1.\overline{6}$ times
+- 4 cores: $S=2.5$ times
+- 8 cores: $S=3.\overline{3}$ times
+
+Upperbound of speedup for infinite number of cores:
+$$lim_{x\to\infty} \frac{1}{0.2 + \frac{0.8}{x}} = \frac{lim_{x\to\infty} 1}{lim_{x\to\infty} 0.2} = \frac{1}{0.2} = 5$$
+
 b. Describe and compare the pros and cons of the three architectures for parallel systems.
 
 - Shared Memory:
@@ -31,9 +48,9 @@ b. Describe and compare the pros and cons of the three architectures for paralle
 #### a. CAP Theorem
 
 > A system can have at most 2 out of 3 properties:
-> - **C***onsistency*: each client can always read and write
-> - **A***vailability*: all clients always have the same view of data.
-> - **P***artition Tolerance*: the system produces deterministic outcomes despite physical network partitions.
+> - **Consistency**: each client can always read and write
+> - **Availability**: all clients always have the same view of data.
+> - **Partition Tolerance**: the system produces deterministic outcomes despite physical network partitions.
 
 ```txt
 Assumptions:
@@ -53,13 +70,15 @@ Assumptions:
 
   - data is always available and consistent for one server, but this state is not guaranteed to hold across all three servers, and thus needs to be *replicated and verified* for the other two.
 
+<div style="page-break-after: always"></div>
+
 #### b. Show ACID can be violated using the relation Accounts.
 
 > A database requires 4 properties:
-> - **A***tomicity*: when an update happens, it is *all updated or nothing is updated*.
-> - **C***onsistency*: the states of various tables must be consistent (relations, constraints) at all times.
-> - **I***solation*: concurrent execution of transactions produces the same outcome as if done sequentially.
-> - **D***urability*: once commmitted, the outcome of a transaction is immutable to problems like power outage, etc.
+> - **Atomicity**: when an update happens, it is *all updated or nothing is updated*.
+> - **Consistency**: the states of various tables must be consistent (relations, constraints) at all times.
+> - **Isolation**: concurrent execution of transactions produces the same outcome as if done sequentially.
+> - **Durability**: once commmitted, the outcome of a transaction is immutable to problems like power outage, etc.
 
 The commit has two statements, so they are not atomic. This commit is not resistent to a power outage, which might cause only one statement to be committed successfully, regardless whether they were submitted sequentially or concurrently.  This situation in turn cause the accounts to be inconsistent.
 
@@ -93,4 +112,17 @@ This model works because it satisfies all ACID properties.
 
 ### **4. Column Store**
 
+*Column Store* (CS) offers significant speedup over *Row Store* (RS) for some applications.  A column is atomic and pure by virtue of the column label (property). In memory, all rows in a column stored sequentially without being mixed up with other properties like in RS. This means that a columnar dataset pertains purely to that column and do not contain data from other columns (irrelevant data). This also means the fetched data footprint is smaller when loaded.
 
+CS offers support for the following operators:
+- Select: same as relational algebra; produces a `Bitstring`
+- Project: same as RA
+- Join: joins projections with respect to predicates
+
+- Aggregation: SQL-like aggregations
+- Sort: sorts all columns of a projection
+- Decompress: expands columns to uncompressed representation
+- Mask`(Bitstring B, Projection Cs) =>` emits only values whose coressponding bits are 1
+- Concat: Combines one or more projections sequentially without changing order into a single projection
+- Permute: Permutes a projection according to the ordering defined by a join index
+- Bitstring operators: BAND -- bitwise AND, BOR -- bitwise OR, BNOT -- bitwise complement
