@@ -24,9 +24,11 @@ b. Describe and compare the pros and cons of the three architectures for paralle
   - **only queries** are passed through the network
   - theoretically **no upper limit to scalability**
 
+<div style="page-break-after: always"></div>
+
 ### **2. [ACID vs BASE]: Data Consistency**
 
-a. CAP Theorem
+#### a. CAP Theorem
 
 > A system can have at most 2 out of 3 properties:
 > - **C***onsistency*: each client can always read and write
@@ -41,7 +43,7 @@ Assumptions:
   
 - **A**vailability and **P**artition Tolerence (forfeiting **C**)
 
-  - data is always available for each server, but is not guaranteed to be consistent without *replication and verification*.
+  - data is always available for each server, but is not guaranteed to be up-to-date without *replication and verification*.
 
 - **C**onsistency and **P**artition Tolerence (forfeiting **A**)
 
@@ -49,10 +51,46 @@ Assumptions:
 
 - **C**onsistency and **A**vailability (forfeiting **P**)
 
-  - data is always available and consistent for one server, but this state is not guaranteed to hold across the other two servers and thus needs to be *replicated and verified*.
+  - data is always available and consistent for one server, but this state is not guaranteed to hold across all three servers, and thus needs to be *replicated and verified* for the other two.
 
-b. Relation Accounts.
+#### b. Show ACID can be violated using the relation Accounts.
+
+> A database requires 4 properties:
+> - **A***tomicity*: when an update happens, it is *all updated or nothing is updated*.
+> - **C***onsistency*: the states of various tables must be consistent (relations, constraints) at all times.
+> - **I***solation*: concurrent execution of transactions produces the same outcome as if done sequentially.
+> - **D***urability*: once commmitted, the outcome of a transaction is immutable to problems like power outage, etc.
+
+The commit has two statements, so they are not atomic. This commit is not resistent to a power outage, which might cause only one statement to be committed successfully, regardless whether they were submitted sequentially or concurrently.  This situation in turn cause the accounts to be inconsistent.
+
+#### c. ACID vs BASE
+
+**BASE** database model fundamentally forfeits **C**onsistency and **I**solation for **A**vailability:
+
+> **B**asically **A**vailable,
+> **S**oft state,
+> **E**ventually consistent
+
+A BASE model allows for:
+
+- stale data (weak consistency)
+- prioritizing availability
+- best effort
+- approximate answers
+- simpler and faster than ACID
+
+<div style="page-break-after: always"></div>
 
 ### **3. Quorum Consensus**
 
+**Quorum Concensus** is a voting model to improve fault tolerance and consistency. A quorum is the minimum number of majority votes to win any transaction commit. A quorum must be defined for every system, typically $W + R > N$ where $N$ is the number of servers in the system.
+
+This model contains two sequential operations, **put** and **get**, and a final vote count. A **put** request is sent to multiple servers so that in the case one server fails other servers still hold copies of data. Next, a **get** request is sent to multiple servers containing the redundant data. Finally, the commit is granted if and only if the sum of successful **put** and **get** requests is larger than the total number of servers. 
+
+This model works because it satisfies all ACID properties.
+
+<div style="page-break-after: always"></div>
+
 ### **4. Column Store**
+
+
