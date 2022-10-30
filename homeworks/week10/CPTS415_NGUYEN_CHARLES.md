@@ -15,7 +15,7 @@ Time costs:
 - 4 cores: $T_4=0.4T$
 - 8 cores: $T_8=0.3T$
 
-Speedups: 
+Speedups:
 - 2 cores: $S=1.\overline{6}$ times
 - 4 cores: $S=2.5$ times
 - 8 cores: $S=3.\overline{3}$ times
@@ -28,7 +28,7 @@ b. Describe and compare the pros and cons of the three architectures for paralle
 - Shared Memory:
   - efficient communication, because memory is accessible to all processors.
   - **low scalability** since the shared memory and network capacity end up becoming the bottleneck of communication.
-  - even if memory cache is added for each processor, there is still the problem of data consistency whenever data needs to be updated across all processors. 
+  - even if memory cache is added for each processor, there is still the problem of data consistency whenever data needs to be updated across all processors.
   - upperbound of scalability is 32/64 processors.
 
 - Shared Disk
@@ -72,7 +72,7 @@ Assumptions:
 
 <div style="page-break-after: always"></div>
 
-#### b. Show ACID can be violated using the relation Accounts.
+#### b. Show ACID can be violated using the relation Accounts
 
 > A database requires 4 properties:
 > - **Atomicity**: when an update happens, it is *all updated or nothing is updated*.
