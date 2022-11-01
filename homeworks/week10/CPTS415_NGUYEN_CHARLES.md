@@ -1,6 +1,6 @@
 # CptS 415 | Assignment-04
 
-## Charles Nguyen, \#011606177
+## Charles Nguyen, #011606177
 
 ### **1. Parallel Data Model**
 
@@ -80,7 +80,7 @@ Assumptions:
 > - **Isolation**: concurrent execution of transactions produces the same outcome as if done sequentially.
 > - **Durability**: once commmitted, the outcome of a transaction is immutable to problems like power outage, etc.
 
-The commit has two statements, so they are not atomic. This commit is not resistent to a power outage, which might cause only one statement to be committed successfully, regardless whether they were submitted sequentially or concurrently.  This situation in turn cause the accounts to be inconsistent.
+The commit has two statements, so they are not atomic. This commit is not resistent to a power outage, which might cause only one statement to be committed successfully, regardless whether they were submitted sequentially or concurrently.  This situation in turn causes the accounts to be inconsistent with the expected outcome of the statements.
 
 #### c. ACID vs BASE
 

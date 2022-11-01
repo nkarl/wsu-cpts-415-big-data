@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "1ae6b8d80cdfde0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b390c1b3f043d95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c778734e31e7a6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dff6690fe213b01f",
+    "type": "split",
+    "children": [
+      {
+        "id": "224d3d2e7162e1da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3adb3fad641f8b13",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7e07ed43697e2eb5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d83d2d4547c6795a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3769c01ea5c20a0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "c928ced1d8cc7cf6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "483facc248ad3acb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "40129b0949a8f497",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8d691997fc7660ba",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c482813cf365d456",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md"
+              }
+            }
+          },
+          {
+            "id": "c4d766625eeab89c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1c778734e31e7a6b",
+  "lastOpenFiles": [
+    "templates/assignment.md",
+    "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+    "week10/CPTS415_NGUYEN_CHARLES.md",
+    "week10/hw4.md"
+  ]
+}
