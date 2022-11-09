@@ -1,6 +1,8 @@
 [
-  "calendar",
   "table-editor-obsidian",
+  "obsidian-mind-map",
   "obsidian-kanban",
-  "nldates-obsidian"
+  "obsidian-admonition",
+  "obsidian-style-settings",
+  "obsidian-git"
 ]

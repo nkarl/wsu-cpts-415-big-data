@@ -1,9 +1,8 @@
 {
-  "pdfExportSettings": {
-    "pageSize": "Letter",
-    "landscape": false,
-    "margin": "0",
-    "downscalePercent": 100
-  },
-  "vimMode": true
+  "vimMode": true,
+  "showFrontmatter": false,
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "showInlineTitle": true,
+  "alwaysUpdateLinks": true
 }

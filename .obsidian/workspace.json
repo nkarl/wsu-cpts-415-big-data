@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "1ae6b8d80cdfde0d",
+    "id": "5bf08f763b6b3ab0",
     "type": "split",
     "children": [
       {
-        "id": "4b390c1b3f043d95",
+        "id": "527309bf16fc4924",
         "type": "tabs",
         "children": [
           {
-            "id": "1c778734e31e7a6b",
+            "id": "cf91a236cae4262f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,23 +18,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fc6660c94d23f026",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "stacked": true
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "dff6690fe213b01f",
+    "id": "e755c04749a37bd4",
     "type": "split",
     "children": [
       {
-        "id": "224d3d2e7162e1da",
+        "id": "b9aac6ec215e24d1",
         "type": "tabs",
         "children": [
           {
-            "id": "3adb3fad641f8b13",
+            "id": "57e7cdb0fdba6ce8",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +56,7 @@
             }
           },
           {
-            "id": "7e07ed43697e2eb5",
+            "id": "4c298deb52d54492",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -59,7 +71,7 @@
             }
           },
           {
-            "id": "d83d2d4547c6795a",
+            "id": "35ab32b5557cb89e",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -73,20 +85,20 @@
     "width": 300
   },
   "right": {
-    "id": "3769c01ea5c20a0b",
+    "id": "3d9f2d7f91211303",
     "type": "split",
     "children": [
       {
-        "id": "c928ced1d8cc7cf6",
+        "id": "398cc470f1e99389",
         "type": "tabs",
         "children": [
           {
-            "id": "483facc248ad3acb",
+            "id": "f268cf1c7a9ae7c9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +110,19 @@
             }
           },
           {
-            "id": "40129b0949a8f497",
+            "id": "e626885f0c166bef",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8d691997fc7660ba",
+            "id": "ec8b0ebfe6b5b8d0",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,21 +133,13 @@
             }
           },
           {
-            "id": "c482813cf365d456",
+            "id": "1ba1032dacb99751",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "homeworks/week10/CPTS415_NGUYEN_CHARLES.md"
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md"
               }
-            }
-          },
-          {
-            "id": "c4d766625eeab89c",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
             }
           }
         ]
@@ -145,11 +149,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1c778734e31e7a6b",
+  "active": "fc6660c94d23f026",
   "lastOpenFiles": [
-    "templates/assignment.md",
     "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
-    "week10/CPTS415_NGUYEN_CHARLES.md",
-    "week10/hw4.md"
+    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+    "homeworks/week12/prompt.hw5.pdf"
   ]
 }
