@@ -4,14 +4,13 @@ class Person:
 
 
 class User:
-    def __init__(self, person, friends):
+    def __init__(self, person: Person, friends: dict[str, Person]):
         self.person: Person     = person
-        self.friends: list[str] = friends
+        self.friends: dict[str, Person] = friends
         self.friends_count: int = len(self.friends)
 
     def __repr__(self):
-        return f"({self.person.name}, {self.friends})"
-
+        return f"({self.person.name}, {[name for name in self.friends]})"
 
 
 def Map(i: User, j: User):
@@ -25,13 +24,13 @@ def Map(i: User, j: User):
 
 
 
-def Reduce(user: User, others_friends: list[str]):
+def Reduce(user: User, others_friends: dict[str, Person]):
     potential: list[str] = list()
     if len(others_friends) == 0 or len(user.friends) == 0:
         return []
     else: 
-        for name in others_friends:
-            if name in user.friends:
+        for name, person in others_friends:
+            if person in user.friends:
                 potential.append(name)
     return potential 
 
@@ -45,7 +44,8 @@ def MapReduce(i: User, j: User):
 John = Person('John')
 Jane = Person('Jane')
 
-a = User(Person('Jack'), [John.name, Jane])
-b = User(Person('Mary'), [Jane])
+a = User(Person('Jack'), {'John': John, 'Jane': Jane})
+b = User(Person('Mary'), {'Jane': Jane})
 
-print(a)
+result = MapReduce(a, b)
+# print(result)
