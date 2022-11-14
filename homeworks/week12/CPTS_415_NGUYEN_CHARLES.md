@@ -41,45 +41,61 @@ class User:
         return f"({self.person.name}, {[name for name in self.friendship]})"
 
 
-
+# for every pair of users <i,j>, pair the person with the small friendship
+# to the friendship of the other person.
 def Map(i: User, j: User):
     if (i.friends_count > j.friends_count):
-        return (j, i.friendship)
+        return (i.friendship, j)
     else:
-        return (i, j.friendship)
+        return (j.friendship, i)
 
 
 
-def Reduce(a: User, b_friendship: dict[str, Person]):
-    if len(a.friendship) == 0 or len(b_friendship) == 0:
+# for every person in the potential list
+def Reduce(potential: dict[str, Person], target: User):
+    if len(potential) == 0 or len(target.friendship) == 0:
         return {}
     else: 
         common: dict[str, Person] = dict()
-        for person in a.friendship:
-            if person in b_friendship:
-                common[person] = a.friendship[person]
+        for person in potential:
+            if person in target.friendship:
+                common[person] = potential[person]
         return common
 
 
 def MapReduce(i: User, j: User):
-    user, others_friends = Map(i, j)
-    common: dict[str, Person] = Reduce(user, others_friends)
-    friendship = sorted([i.person.name, j.person.name])
-    return (tuple(friendship), common)
+    potential, target = Map(i, j)
+    common: dict[str, Person] = Reduce(potential, target)
+    user_pair = sorted([i.person.name, j.person.name])
+    return (tuple(user_pair), common)
 
 
-Alice = Person('Alice')
-Bob   = Person('Bob')
-John  = Person('John')
-Jane  = Person('Jane')
+def main():
+    Alice = Person('Alice')
+    Bob   = Person('Bob')
+    John  = Person('John')
+    Jane  = Person('Jane')
+    
+    a = User(Person('Jack'), {
+        f"{Bob}": Bob,
+        f"{Jane}": Jane,
+        f"{Alice}": Alice,
+        "f{John}": John
+    })
+    b = User(Person('Mary'), {
+        f"{Jane}": Jane,
+        f"{Bob}": Bob,
+        f"{Alice}": Alice
+    })
+    
+    result = MapReduce(a, b)
+    
+    for person in result[1]:
+        print(result[1][person].name)
 
-a = User(Person('Jack'), {f"{Bob}": Bob, f"{Jane}": Jane, f"{Alice}": Alice, "f{John}": John})
-b = User(Person('Mary'), {f"{Jane}": Jane, f"{Bob}": Bob, f"{Alice}": Alice})
 
-result = MapReduce(a, b)
-
-for person in result[1]:
-    print(result[1][person].name)
+if __name__ == "__main__":
+    main()
 
 ```
 

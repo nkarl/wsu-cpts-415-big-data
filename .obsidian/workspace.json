@@ -29,7 +29,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "homeworks/week12/prompt.hw5.pdf",
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "homeworks/week12/prompt.hw5.pdf",
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "homeworks/week12/prompt.hw5.pdf"
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md"
               }
             }
           }
@@ -147,10 +148,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "54a9545fe1b11875",
+  "active": "fc6660c94d23f026",
   "lastOpenFiles": [
-    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
     "homeworks/week12/prompt.hw5.pdf",
+    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
     "materials/L10-1 Hadoop.pdf",
     "materials/L9-2 MapReduce II.pdf",
     "materials/L9-1 MapReduce I.pdf",
