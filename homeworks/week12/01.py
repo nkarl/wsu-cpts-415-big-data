@@ -6,29 +6,24 @@ class Person:
 class User:
     """
     Each User object contains:
-        - key:
-            a Person, a unique object in database
-        - value:
-            friendship, a dict associated with the primary key, where each
-            entry use the address of the person in database as key for
-            uniqueness.
+        - k1: a Person, a unique object in database
+        - v1: friendship, a dict associated with the primary key, where
+	      each entry use the address of the person in database as key
+	      for uniqueness.
     """
     def __init__(self, person: Person, friends: dict[str, Person]):
         self.person: Person                = person
         self.friendship: dict[str, Person] = friends
         self.friends_count: int            = len(self.friendship)
-
     def __repr__(self):
         return f"({self.person.name}, {[name for name in self.friendship]})"
 
 
-# for every pair of users <i,j>, pair the person with the small friendship
-# to the friendship of the other person.
 def Map(i: User, j: User):
     """
     Compare the two User objects and return a new 2-tuple:
-        - first: the shorter friend list as upper bound for potential friends
-        - second: the other person as target for matching
+    - k2: the shorter friend list as upper bound for potential friends
+    - v2: the other person as target for matching
     """
     if (i.friends_count > j.friends_count):
         return (i.friendship, j)
@@ -36,12 +31,11 @@ def Map(i: User, j: User):
         return (j.friendship, i)
 
 
-
 def Reduce(potential: dict[str, Person], target: User):
     """
     From a list of potential friends and a target, check every
     key in the potential list against the target's frienship.
-    Return the dictionary of common keys.
+    Return the list of common keys.
     """
     if len(potential) == 0 or len(target.friendship) == 0:
         return []
@@ -56,10 +50,8 @@ def Reduce(potential: dict[str, Person], target: User):
 def MapReduce(i: User, j: User):
     """
     Map and Reduce together.
-    - key:
-        the pair of users
-    - value:
-        a list of their common friends
+	- k3: the pair of users
+	- v3: a list of Person objects in database
     """
     potential, target = Map(i, j)
     common: list[Person] = Reduce(potential, target)
@@ -77,7 +69,7 @@ def main():
         f"{Bob}": Bob,
         f"{Jane}": Jane,
         f"{Alice}": Alice,
-        "f{John}": John
+        f"{John}": John
     })
     b = User(Person('Mary'), {
         f"{Jane}": Jane,
@@ -91,3 +83,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
