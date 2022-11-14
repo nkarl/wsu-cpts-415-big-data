@@ -3,7 +3,7 @@
 ## 1. MapReduce
 ---
 ### a.
-Facebook updates the “common friends” of you and response to hundreds of millions of requests every day.
+Facebook updates the “common friends” of you and respond to hundreds of millions of requests every day.
 
 The friendship information is stored as a pair: `(Person, [List of Friends])` for every user in the social network.
 
@@ -124,21 +124,44 @@ Search engine companies like Google maintains hot webpages in a set $\boldsymbol
 Give the pseudo-code of your MR program.
 
 > [!solution]
-
-```python
-
-def Map(R: list[list[str]]):
-	bag: dict{str, int} = dict()
-	for r in R:
-		for word in r:
-			bag[word] = bag.get(word, 0) + 1
-	return bag
-
-def Reduce(bag: dict[str, int]):p
-	
-	pass
-
-```
+> 
+> ```python
+> 
+> def Map(R: list[list[str]]):
+> 	"""
+> 	Map every word in every article r in R to an
+> 	entry in a dictionary:
+> 	- k_w: word
+> 	- v_w: frequency of the word, incremented at current iteration
+> 	- intput: list of lists of words
+> 	- output: dictionary of words and frequency
+> 	"""
+> 	bag: dict[str, int] = dict()
+> 	for r in R:
+> 		for word in r:
+> 			bag[word] = bag.get(word, 0) + 1
+> 	return bag
+> 
+> def Reduce(bag: dict[str, int]):
+> 	"""
+> 	From a bag of words and associated frequencies,
+> 	sort the bag by value (word frequency) and return an ordered map
+> 	of words and their associated frequency.
+> 	input: unordered map
+> 	output: ordered list of 2-tuples
+> 	"""
+> 	dict(sorted(bag.items(), key=lambda item: item[1]))
+> 	return list(bag.items())
+> 
+> def MapReduce(R: lsit[list[str]]):
+> 	"""
+> 	return keys from the last 10 entries as most frequent words.
+> 	"""
+> 	word_frequency_map = Map(R)
+> 	words_ordered_list = Reduce(word_frequency_map)
+> 	list_size = len(words_ordered_list) 
+> 	return words_order_list[list_size-1-10:-1]
+> ```
 
 
 ## 2. Graph Parallel Models: MR for Graph Processing

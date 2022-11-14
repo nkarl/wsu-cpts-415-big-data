@@ -6,8 +6,12 @@ class Person:
 class User:
     """
     Each User object contains:
-        - key: person, a unique object in database
-        - value: friendship, a unique dict associated with the key
+        - key:
+            a Person, a unique object in database
+        - value:
+            friendship, a dict associated with the primary key, where each
+            entry use the address of the person in database as key for
+            uniqueness.
     """
     def __init__(self, person: Person, friends: dict[str, Person]):
         self.person: Person                = person
@@ -52,6 +56,10 @@ def Reduce(potential: dict[str, Person], target: User):
 def MapReduce(i: User, j: User):
     """
     Map and Reduce together.
+    - key:
+        the pair of users
+    - value:
+        a list of their common friends
     """
     potential, target = Map(i, j)
     common: list[Person] = Reduce(potential, target)
