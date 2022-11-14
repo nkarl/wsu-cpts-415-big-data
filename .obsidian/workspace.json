@@ -28,39 +28,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c3cd74f33a860eeb",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "materials/L9-1 MapReduce I.pdf"
-              }
-            }
-          },
-          {
-            "id": "ecbe06aa5e030b08",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "materials/L9-2 MapReduce II.pdf"
-              }
-            }
-          },
-          {
-            "id": "860c3925f8a99a23",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "materials/L10-1 Hadoop.pdf"
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "materials/L9-1 MapReduce I.pdf",
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "materials/L9-1 MapReduce I.pdf",
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "materials/L9-1 MapReduce I.pdf"
+                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md"
               }
             }
           }
@@ -177,13 +147,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c3cd74f33a860eeb",
+  "active": "fc6660c94d23f026",
   "lastOpenFiles": [
-    "materials/L9-2 MapReduce II.pdf",
-    "materials/L10-1 Hadoop.pdf",
-    "materials/L9-1 MapReduce I.pdf",
-    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
     "homeworks/week12/prompt.hw5.pdf",
+    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+    "materials/L10-1 Hadoop.pdf",
+    "materials/L9-2 MapReduce II.pdf",
+    "materials/L9-1 MapReduce I.pdf",
     "homeworks/week10/CPTS415_NGUYEN_CHARLES.md"
   ]
 }
