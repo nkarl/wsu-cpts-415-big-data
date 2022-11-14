@@ -39,7 +39,7 @@ iterable_friends = user_i.friends if user_i.friends.count < user_j.friends.count
 
 common_friends = list()
 for i in range(iterable_friends):
-	
+	pass
 ```
 
 ## 2. Graph Parallel Models: MR for Graph Processing
@@ -61,7 +61,7 @@ Provide necessary correctness and complexity analysis.
 ---
 Hadoop Program:
 
-The attached CSV file contains hourly normal recordings for temperature and dew point temperature at Asheville Regional Airport, NC, USA. _The unit of measurement_ is **tenth of a degree Fahrenheit**. For example, 344 is 34.4 F.
+The attached CSV file contains hourly normal recordings for temperature and dew point temperature at Asheville Regional Airport, NC, USA. _The unit of measurement_ is in **tenths of a degree Fahrenheit**. For example, 344 is 34.4 F.
 
 Write a program using Hadoop to compute and output daily average measurements for temperature and dew point temperature.
 
