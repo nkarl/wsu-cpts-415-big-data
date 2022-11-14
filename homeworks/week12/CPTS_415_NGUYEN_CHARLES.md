@@ -19,7 +19,7 @@ user_pair, list_of_common_friends =\
 # for all pairs of i and j who are friends.
 ```
 
-The order of i and j you returned should be the same as the lexicographical order of their names.
+The order of $i$ and $j$ you returned should be the same as the lexicographical order of their names.
 
 You need to give the pseudo-code of a main function, and both Map() and Reduce() function. Specify the key/value pair and their semantics (what are they referring to?).
 
@@ -34,6 +34,12 @@ This is easy. I'm going to write it in Python.
 user_i
 user_j
 
+function Map(i):
+	pass
+
+
+function Reduce(j):
+
 # get min of the lists
 iterable_friends = user_i.friends if user_i.friends.count < user_j.friends.count else user_j.friends
 
@@ -44,7 +50,7 @@ for i in range(iterable_friends):
 
 ## 2. Graph Parallel Models: MR for Graph Processing
 ---
-### a.
+#### a.
 Consider the common friends problem in Problem 1.a. We study a “2-hop common contact problem”, where a list should be returned for any pair of friends i and j, such that the list contains all the users that can reach both i and j within 2 hops. Write a MR algorithm to solve the problem and give the pseudo code.
 
 #### Solution
@@ -67,17 +73,17 @@ Write a program using Hadoop to compute and output daily average measurements fo
 
 The daily average measurements *should include measurements for 24-hour period*. For example, from:
 ```
-	20100101 00:00 (2010, January 1st, 00:00)
+20100101 00:00 (2010, January 1st, 00:00)
 ```
 
 to:
 ```
-	20100101 23:00 (2010, January 1st, 23:00)
+20100101 23:00 (2010, January 1st, 23:00)
 ```
 
 Output the result in the format shown below - the columns are date and the combined result (separated by comma) of daily temperature and daily dew point temperature:
 
-```
+```txt
 20100101    377.04, 285.58
 20100102    378.67, 286.92
 ....        ....  , .... 
