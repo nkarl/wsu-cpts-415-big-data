@@ -28,13 +28,8 @@ def Reduce(user: User, other_friendlist: list):
     return common_friends
 
 
-John = Person('John')
-Jane = Person('Jane')
-a = User(Person('Jack'), [John, Jane])
-b = User(Person('John'), [Jane])
+def MapReduce(i: User, j: User):
+    user, others_friends = Map(i, j)
+    common: list = Reduce(user, others_friends)
+    return ((i, j), common)
 
-user, others_friends = Map(a, b)
-common = Reduce(user, others_friends)
-
-for p in common:
-    print(p.name)

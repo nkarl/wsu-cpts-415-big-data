@@ -27,37 +27,41 @@ You need to give the pseudo-code of a main function, and both Map() and Reduce()
 This is easy. I'm going to write it in Python.
 
 ```python
-# assumptions:
-#   - partitions: friends in the each person's list are distributed
-#     across one or more partitions
+class Person:
+    def __init__(self, name: str):
+        self.name = name
 
 class User:
-	person: Person
-	friends: list
-	def __ini__(self, person, friends):
-		self.person        = person 
-		self.friends       = friends
-		self.friends_count = len(self.friends)
-
-user_i 
-user_j
-
-function Map(i: User, j: User):
-	if (i.friends_count < j.friends_count):
-		return j, i.friends
-	else:
-		return i, j.friends
+    def __init__(self, person, friends):
+        self.person = person
+        self.friends = friends
+        self.friends_count = len(self.friends)
 
 
-function Reduce(iterable_friends: list(Person)):
-	for 
 
-# get min of the lists
-iterable_friends = user_i.friends if user_i.friends.count < user_j.friends.count else user_j.friends
+def Map(i: User, j: User):
+    iterable_friends: tuple
+    if (i.friends_count > j.friends_count):
+        iterable_friends = (j, i.friends)
+    else:
+        iterable_friends = (i, j.friends)
 
-common_friends = list()
-for i in range(iterable_friends):
-	pass
+    return iterable_friends
+
+
+def Reduce(user: User, other_friendlist: list):
+    common_friends = list()
+    for person in other_friendlist:
+        if person in user.friends:
+            common_friends += [person]
+    return common_friends
+
+
+def MapReduce(i: User, j: User):
+    user, others_friends = Map(i, j)
+    common: list = Reduce(user, others_friends)
+    return ((i, j), common)
+
 ```
 
 ## 2. Graph Parallel Models: MR for Graph Processing
