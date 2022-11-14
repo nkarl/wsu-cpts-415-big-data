@@ -24,43 +24,61 @@ The order of $i$ and $j$ you returned should be the same as the lexicographical 
 You need to give the pseudo-code of a main function, and both Map() and Reduce() function. Specify the key/value pair and their semantics (what are they referring to?).
 
 #### Solution
-This is easy. I'm going to write it in Python.
 
 ```python
 class Person:
     def __init__(self, name: str):
-        self.name = name
+        self.name: str = name
+
 
 class User:
-    def __init__(self, person, friends):
-        self.person = person
-        self.friends = friends
-        self.friends_count = len(self.friends)
+    def __init__(self, person: Person, friends: dict[str, Person]):
+        self.person: Person             = person
+        self.friends: dict[str, Person] = friends
+        self.friends_count: int         = len(self.friends)
 
+    def __repr__(self):
+        return f"({self.person.name}, {[name for name in self.friends]})"
 
 
 def Map(i: User, j: User):
-    iterable_friends: tuple
     if (i.friends_count > j.friends_count):
-        iterable_friends = (j, i.friends)
+        return (j, i.friends)
     else:
-        iterable_friends = (i, j.friends)
-
-    return iterable_friends
+        return (i, j.friends)
 
 
-def Reduce(user: User, other_friendlist: list):
-    common_friends = list()
-    for person in other_friendlist:
-        if person in user.friends:
-            common_friends += [person]
-    return common_friends
+
+def Reduce(user: User, other_friends: dict[str, Person]):
+    if len(other_friends) == 0 or len(user.friends) == 0:
+        return {}
+    else: 
+        potential: dict[str, Person] = dict()
+        for person in user.friends:
+            if person in other_friends:
+                potential[person] = user.friends[person]
+        return potential
 
 
 def MapReduce(i: User, j: User):
     user, others_friends = Map(i, j)
-    common: list = Reduce(user, others_friends)
-    return ((i, j), common)
+    common: dict[str, Person] = Reduce(user, others_friends)
+    friendship = sorted([i.person.name, j.person.name])
+    return (tuple(friendship), common)
+
+
+Alice = Person('Alice')
+Bob   = Person('Bob')
+John  = Person('John')
+Jane  = Person('Jane')
+
+a = User(Person('Jack'), {f"{Bob}": Bob, f"{Jane}": Jane, f"{Alice}": Alice, "f{John}": John})
+b = User(Person('Mary'), {f"{Jane}": Jane, f"{Bob}": Bob, f"{Alice}": Alice})
+
+result = MapReduce(a, b)
+
+for person in result[1]:
+    print(result[1][person].name)
 
 ```
 

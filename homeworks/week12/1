@@ -49,5 +49,5 @@ b = User(Person('Mary'), {f"{Jane}": Jane, f"{Bob}": Bob, f"{Alice}": Alice})
 
 result = MapReduce(a, b)
 
-for person in result[1]:
-    print(result[1][person].name)
+for person in result:
+    print(person)
