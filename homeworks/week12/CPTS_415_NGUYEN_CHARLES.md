@@ -48,8 +48,6 @@ You need to give the pseudo-code of a main function, and both Map() and Reduce()
 >         return f"({self.person.name}, {[name for name in self.friendship]})"
 > 
 > 
-> # for every pair of users <i,j>, pair the person with the small friendship
-> # to the friendship of the other person.
 > def Map(i: User, j: User):
 >     """
 >     Compare the two User objects and return a new 2-tuple:
@@ -66,7 +64,7 @@ You need to give the pseudo-code of a main function, and both Map() and Reduce()
 >     """
 >     From a list of potential friends and a target, check every
 >     key in the potential list against the target's frienship.
->     Return the dictionary of common keys.
+>     Return the list of common keys.
 >     """
 >     if len(potential) == 0 or len(target.friendship) == 0:
 >         return []
@@ -126,6 +124,7 @@ Search engine companies like Google maintains hot webpages in a set $\boldsymbol
 Give the pseudo-code of your MR program.
 
 > [!solution]
+
 
 
 
