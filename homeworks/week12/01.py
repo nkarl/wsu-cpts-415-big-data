@@ -1,31 +1,39 @@
 class Person:
     def __init__(self, name: str):
-        self.name = name
+        self.name: str = name
+
 
 class User:
     def __init__(self, person, friends):
-        self.person = person
-        self.friends = friends
-        self.friends_count = len(self.friends)
+        self.person: Person     = person
+        self.friends: list[str] = friends
+        self.friends_count: int = len(self.friends)
+
+    def __repr__(self):
+        return f"({self.person.name}, {self.friends})"
 
 
 
 def Map(i: User, j: User):
-    iterable_friends: tuple
+    person: User
     if (i.friends_count > j.friends_count):
-        iterable_friends = (j, i.friends)
+        person = j
+        return (person, i.friends)
     else:
-        iterable_friends = (i, j.friends)
+        person = i
+        return (person, j.friends)
 
-    return iterable_friends
 
 
-def Reduce(user: User, other_friendlist: list):
-    common_friends = list()
-    for person in other_friendlist:
-        if person in user.friends:
-            common_friends += [person]
-    return common_friends
+def Reduce(user: User, others_friends: list[str]):
+    potential: list[str] = list()
+    if len(others_friends) == 0 or len(user.friends) == 0:
+        return []
+    else: 
+        for name in others_friends:
+            if name in user.friends:
+                potential.append(name)
+    return potential 
 
 
 def MapReduce(i: User, j: User):
@@ -33,3 +41,11 @@ def MapReduce(i: User, j: User):
     common: list = Reduce(user, others_friends)
     return ((i, j), common)
 
+
+John = Person('John')
+Jane = Person('Jane')
+
+a = User(Person('Jack'), [John.name, Jane])
+b = User(Person('Mary'), [Jane])
+
+print(a)
