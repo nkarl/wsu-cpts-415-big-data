@@ -26,6 +26,22 @@ You need to give the pseudo-code of a main function, and both Map() and Reduce()
 #### Solution
 This is easy. I'm going to write it in Python.
 
+```python
+# assumptions:
+#   - partitions: friends in the each person's list are distributed
+#     across one or more partitions
+
+user_i
+user_j
+
+# get min of the lists
+iterable_friends = user_i.friends if user_i.friends.count < user_j.friends.count else user_j.friends
+
+common_friends = list()
+for i in range(iterable_friends):
+	
+```
+
 ## 2. Graph Parallel Models: MR for Graph Processing
 ---
 ### a.
