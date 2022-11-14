@@ -4,6 +4,11 @@ class Person:
 
 
 class User:
+    """
+    Each User object contains:
+        - key: person, a unique object in database
+        - value: friendship, a unique dict associated with the key
+    """
     def __init__(self, person: Person, friends: dict[str, Person]):
         self.person: Person                = person
         self.friendship: dict[str, Person] = friends
@@ -16,6 +21,11 @@ class User:
 # for every pair of users <i,j>, pair the person with the small friendship
 # to the friendship of the other person.
 def Map(i: User, j: User):
+    """
+    Compare the two User objects and return a new 2-tuple:
+        - first: the shorter friend list as upper bound for potential friends
+        - second: the other person as target for matching
+    """
     if (i.friends_count > j.friends_count):
         return (i.friendship, j)
     else:
@@ -23,23 +33,30 @@ def Map(i: User, j: User):
 
 
 
-# for every person in the potential list
 def Reduce(potential: dict[str, Person], target: User):
+    """
+    From a list of potential friends and a target, check every
+    key in the potential list against the target's frienship.
+    Return the dictionary of common keys.
+    """
     if len(potential) == 0 or len(target.friendship) == 0:
-        return {}
+        return []
     else: 
-        common: dict[str, Person] = dict()
+        common: list[Person] = list()
         for person in potential:
             if person in target.friendship:
-                common[person] = potential[person]
+                common += [potential[person]]
         return common
 
 
 def MapReduce(i: User, j: User):
+    """
+    Map and Reduce together.
+    """
     potential, target = Map(i, j)
-    common: dict[str, Person] = Reduce(potential, target)
+    common: list[Person] = Reduce(potential, target)
     user_pair = sorted([i.person.name, j.person.name])
-    return (tuple(user_pair), common)
+    return {"pair": tuple(user_pair), "common": common}
 
 
 def main():
@@ -61,10 +78,8 @@ def main():
     })
     
     result = MapReduce(a, b)
+    print(result["pair"], result["common"])
     
-    for person in result[1]:
-        print(result[1][person].name)
-
 
 if __name__ == "__main__":
     main()
