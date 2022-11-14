@@ -31,14 +31,25 @@ This is easy. I'm going to write it in Python.
 #   - partitions: friends in the each person's list are distributed
 #     across one or more partitions
 
-user_i
+class User:
+	Self = Person()
+	Friends = list(Person)
+	def __ini__(self, user: tuple):
+		Info    = user[0]
+		Friends = user[1]
+
+user_i = 
 user_j
 
-function Map(i):
-	pass
+function Map(user_a: Person, user_b: Person):
+	if (user_a.friends_count < user_b.friends_count):
+		return user_b, user_a.friends
+	else:
+		return user_a, user_b.friends
 
 
-function Reduce(j):
+function Reduce(iterable_friends: list(Person)):
+	for 
 
 # get min of the lists
 iterable_friends = user_i.friends if user_i.friends.count < user_j.friends.count else user_j.friends
