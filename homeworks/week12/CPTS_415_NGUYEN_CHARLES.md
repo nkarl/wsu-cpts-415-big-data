@@ -32,20 +32,21 @@ This is easy. I'm going to write it in Python.
 #     across one or more partitions
 
 class User:
-	Self = Person()
-	Friends = list(Person)
-	def __ini__(self, user: tuple):
-		Info    = user[0]
-		Friends = user[1]
+	person: Person
+	friends: list
+	def __ini__(self, person, friends):
+		self.person        = person 
+		self.friends       = friends
+		self.friends_count = len(self.friends)
 
-user_i = 
+user_i 
 user_j
 
-function Map(user_a: Person, user_b: Person):
-	if (user_a.friends_count < user_b.friends_count):
-		return user_b, user_a.friends
+function Map(i: User, j: User):
+	if (i.friends_count < j.friends_count):
+		return j, i.friends
 	else:
-		return user_a, user_b.friends
+		return i, j.friends
 
 
 function Reduce(iterable_friends: list(Person)):
