@@ -168,9 +168,13 @@ Consider the common friends problem in Problem 1.a. We study a “2-hop common c
 
 #### Solution
 
+```python
+# depth first search.
+```
+
 
 #### b.
-We described how to compute distances with mapReduce. Consider a class of d-bounded reachability queries as follows. Given a graph $G$, two nodes $u$ and $v$ and an integer $d$, it returns a Boolean answer `YES`, if the two nodes can be connected by a path of length no greater than $d$. Otherwise, it returns `NO`. Write an MR program to compute the query $Q(G, u, v, d)$ and give the pseudo code.
+We described how to compute distances with mapReduce. Consider a class of $d$-bounded reachability queries as follows. Given a graph $G$, two nodes $u$ and $v$ and an integer $d$, it returns a Boolean answer `YES`, if the two nodes can be connected by a path of length no greater than $d$. Otherwise, it returns `NO`. Write an MR program to compute the query $Q(G, u, v, d)$ and give the pseudo code.
 
 Provide necessary correctness and complexity analysis.
 
