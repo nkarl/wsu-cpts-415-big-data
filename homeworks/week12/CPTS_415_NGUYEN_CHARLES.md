@@ -148,8 +148,10 @@ Consider the common friends problem in Problem 1.a. We study a “2-hop common c
 
 stack = dict()
 
-def Map():
+def Map(i: User, j: User):
+	return list(i.friendship), list(j.friendship)
 
+def Reduce(i_friends: dict)
 ```
 
 
