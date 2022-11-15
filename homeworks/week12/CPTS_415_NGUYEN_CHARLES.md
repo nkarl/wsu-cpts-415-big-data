@@ -86,31 +86,6 @@ def MapReduce(i: User, j: User):
     user_pair = sorted([i.person.name, j.person.name])
     return {"pair": tuple(user_pair), "common": common}
 
-
-def main():
-    Alice = Person('Alice')
-    Bob   = Person('Bob')
-    John  = Person('John')
-    Jane  = Person('Jane')
-    
-    a = User(Person('Jack'), {
-        f"{Bob}": Bob,
-        f"{Jane}": Jane,
-        f"{Alice}": Alice,
-        f"{John}": John
-    })
-    b = User(Person('Mary'), {
-        f"{Jane}": Jane,
-        f"{Bob}": Bob,
-        f"{Alice}": Alice
-    })
-    
-    result = MapReduce(a, b)
-    print(result["pair"], result["common"])
-    
-
-if __name__ == "__main__":
-    main()
 ```
 
 
@@ -170,6 +145,11 @@ Consider the common friends problem in Problem 1.a. We study a “2-hop common c
 
 ```python
 # depth first search.
+
+stack = dict()
+
+def Map():
+
 ```
 
 

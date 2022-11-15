@@ -146,10 +146,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "fc6660c94d23f026",
+  "active": "1ba1032dacb99751",
   "lastOpenFiles": [
     "homeworks/week12/prompt.hw5.pdf",
     "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
