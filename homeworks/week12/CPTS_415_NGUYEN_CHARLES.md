@@ -150,9 +150,12 @@ Consider the common friends problem in Problem 1.a. We study a “2-hop common c
 stack = dict()
 
 def Map(i: User, j: User):
+	# get minimum friendlist
 	return list(i.friendship), list(j.friendship)
 
-def Reduce(i_friends: dict)
+def Reduce(i_friends: dict):
+	# from list of child nodes, reduce to nodes
+	# that can reach both i and j.
 ```
 
 
