@@ -99,38 +99,39 @@ Give the pseudo-code of your MR program.
 ```python
 def Map(R: list[list[str]]):
 	"""
-	Map every word in every article r in R to an
-	entry in a dictionary:
+	Map every word in every article r in R to an entry in a map:
 	- k_w: word
 	- v_w: frequency of the word, incremented at current iteration
 	- intput: list of lists of words
-	- output: dictionary of words and frequency
+	- output: sorted map of 2-tuple of word and frequency
 	"""
 	bag: dict[str, int] = dict()
 	for r in R:
 		for word in r:
 			bag[word] = bag.get(word, 0) + 1
-	return bag
+	ordered_bag = dict(
+			sorted(bag.keys(), key=lambda item: item[1])
+		)
+	return orderd_bag
 
-def Reduce(bag: dict[str, int]):
+def Reduce(ordered_bag: dict[str, int]):
 	"""
-	From a bag of words and associated frequencies,
-	sort the bag by value (word frequency) and return an ordered map
-	of words and their associated frequency.
-	input: unordered map
-	output: ordered list of 2-tuples
+	From a bag of words sorted by frequencies, return the 10
+	most common words.
+	input: ordered map
+	output: 10 most frequent words
 	"""
-	dict(sorted(bag.items(), key=lambda item: item[1]))
-	return list(bag.items())
+	words = list([x[0] for x in ordered_bag])
+	w = len(words)
+	return words[w-1-10:-1]
 
-def MapReduce(R: lsit[list[str]]):
+def MapReduce(R: list[list[str]]):
 	"""
-	return keys from the last 10 entries as most frequent words.
+	Return the last 10 entries as most frequent words.
 	"""
-	word_frequency_map = Map(R)
-	words_ordered_list = Reduce(word_frequency_map)
-	list_size = len(words_ordered_list) 
-	return words_order_list[list_size-1-10:-1]
+	ordered_bag = Map(R)
+	most_frequent = Reduce(ordered_bag)
+	return most_frequent
 ```
 
 
