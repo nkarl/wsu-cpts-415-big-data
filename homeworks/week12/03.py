@@ -12,5 +12,9 @@ def read_input(file):
 datafile = 'normal_hly_sample_temperature.csv'
 
 with pd.read_csv(datafile, sep=',', iterator=True) as reader:
-    df = reader.get_chunk(24)
-    print(df.loc[:, 'DATE':'HLY-DEWP-NORMAL'])
+    df    = reader.get_chunk(24)
+    today = df['DATE'][0].split(' ')[0]
+    temp  = df['HLY-TEMP-NORMAL'].sum() / df.shape[0]
+    dew   = df['HLY-DEWP-NORMAL'].sum() / df.shape[0]
+    print(f"{today}\t{temp}, {dew}")
+
