@@ -11,18 +11,13 @@ Write a MapReduce program *to return a dictionary of common friends* of the form
 ```python
 user_pair, list_of_common_friends =\
 	(user_i, user_j),
-	[
-		list(
-			#Common Friends of user_i and user_j)
-		)
-	]
-
+	[list(
+		#Common Friends of user_i and user_j)
+		)]
 # for all pairs of i and j who are friends.
 ```
 
-The order of $i$ and $j$ you returned should be the same as the lexicographical order of their names.
-
-You need to give the pseudo-code of a main function, and both Map() and Reduce() function. Specify the key/value pair and their semantics (what are they referring to?).
+The order of $i$ and $j$ you returned should be the same as the lexicographical order of their names. You need to give the pseudo-code of a main function, and both Map() and Reduce() function. Specify the key/value pair and their semantics (what are they referring to?).
 
 > [!solution]
 ```python
@@ -34,10 +29,10 @@ class Person:
 class User:
     """
     Each User object contains:
-        - k1: a Person, a unique object in database
-        - v1: friendship, a dict associated with the primary key, where
-	      each entry use the address of the person in database as key
-	      for uniqueness.
+    - k1: a Person, a unique object in database
+    - v1: friendship, a dict associated with the primary key, where
+	each entry use the address of the person in database as key
+	for uniqueness.
     """
     def __init__(self, person: Person, friends: dict[str, Person]):
         self.person: Person                = person
@@ -78,8 +73,8 @@ def Reduce(potential: dict[str, Person], target: User):
 def MapReduce(i: User, j: User):
     """
     Map and Reduce together.
-	- k3: the pair of users
-	- v3: a list of Person objects in database
+    - k3: the pair of users
+    - v3: a list of Person objects in database
     """
     potential, target = Map(i, j)
     common: list[Person] = Reduce(potential, target)
@@ -90,7 +85,6 @@ def MapReduce(i: User, j: User):
 
 
 ### b. Top-10 Keywords
-
 Search engine companies like Google maintains hot webpages in a set $\boldsymbol{R}$ for keyword search. Each record $r \in \boldsymbol{R}$ is an article, stored as a sequence of keywords. Write a MapReduce program to report the top 10 most frequent keywords appeared in the webpages in $\boldsymbol{R}$.
 
 Give the pseudo-code of your MR program.
@@ -139,7 +133,7 @@ def MapReduce(R: list[list[str]]):
 
 ## 2. Graph Parallel Models: MR for Graph Processing
 ---
-#### a.
+### a. 2-hop Common
 Consider the common friends problem in Problem 1.a. We study a “2-hop common contact problem”, where a list should be returned for any pair of friends i and j, such that the list contains all the users that can reach both i and j within 2 hops. Write a MR algorithm to solve the problem and give the pseudo code.
 
 #### Solution
@@ -151,15 +145,26 @@ stack = dict()
 
 def Map(i: User, j: User):
 	# get minimum friendlist
-	return list(i.friendship), list(j.friendship)
+    if (i.friends_count > j.friends_count):
+        return (i.friendship, j)
+    else:
+        return (j.friendship, i)
 
-def Reduce(i_friends: dict):
+def Reduce(potential: dict, target: User):
 	# from list of child nodes, reduce to nodes
 	# that can reach both i and j.
+    if len(potential) == 0 or len(target.friendship) == 0:
+        return []
+    else: 
+        common: list[Person] = list()
+        for person in potential:
+            if person in target.friendship:
+                common += [potential[person]]
+        return common
 ```
 
 
-#### b.
+### b. $d$-bounded reachability
 We described how to compute distances with mapReduce. Consider a class of $d$-bounded reachability queries as follows. Given a graph $G$, two nodes $u$ and $v$ and an integer $d$, it returns a Boolean answer `YES`, if the two nodes can be connected by a path of length no greater than $d$. Otherwise, it returns `NO`. Write an MR program to compute the query $Q(G, u, v, d)$ and give the pseudo code.
 
 Provide necessary correctness and complexity analysis.
