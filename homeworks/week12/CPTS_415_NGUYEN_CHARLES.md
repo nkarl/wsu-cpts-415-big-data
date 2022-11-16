@@ -136,41 +136,55 @@ def MapReduce(R: list[list[str]]):
 ### a. 2-hop Common
 Consider the common friends problem in Problem 1.a. We study a “2-hop common contact problem”, where a list should be returned for any pair of friends i and j, such that the list contains all the users that can reach both i and j within 2 hops. Write a MR algorithm to solve the problem and give the pseudo code.
 
-#### Solution
-
-```python
-# depth first search.
-
-stack = dict()
-
-def Map(i: User, j: User):
-	# get minimum friendlist
-    if (i.friends_count > j.friends_count):
-        return (i.friendship, j)
-    else:
-        return (j.friendship, i)
-
-def Reduce(potential: dict, target: User):
-	# from list of child nodes, reduce to nodes
-	# that can reach both i and j.
-    if len(potential) == 0 or len(target.friendship) == 0:
-        return []
-    else: 
-        common: list[Person] = list()
-        for person in potential:
-            if person in target.friendship:
-                common += [potential[person]]
-        return common
-```
-
+> [!Solution]
+> 
+> Map:
+> - G, user, target := min(i.friendship, j.friendship)
+> 
+> Dijkstra(G, user, target, w):
+> - common := list
+> - For all nodes v in user.friendship:
+> 	- d[v] := infty
+> - d[user] := 0; Q := user.friendship
+> - While Q is non-empty, do:
+> 	- u := ExtraMin(Q)
+> 	- For all nodes v in adj(u):
+> 		- if v is target and v not in common:
+> 			- common[v] = 1, then
+> 			- break
+> 
+> Reduce:
+> - Dijkstra(Map, 2)
+> 
 
 ### b. $d$-bounded reachability
 We described how to compute distances with mapReduce. Consider a class of $d$-bounded reachability queries as follows. Given a graph $G$, two nodes $u$ and $v$ and an integer $d$, it returns a Boolean answer `YES`, if the two nodes can be connected by a path of length no greater than $d$. Otherwise, it returns `NO`. Write an MR program to compute the query $Q(G, u, v, d)$ and give the pseudo code.
 
 Provide necessary correctness and complexity analysis.
 
-#### Solution
-
+> [!solution]
+>
+> Map:
+> - G, user, target := min(i.friendship, j.friendship)
+> 
+> Dijkstra(G, user, target, w):
+> - common := list
+> - For all nodes v in user.friendship:
+> 	- d[v] := infty
+> - d[user] := 0; Q := user.friendship
+> - While Q is non-empty, do:
+> 	- u := ExtraMin(Q)
+> 	- For all nodes v in adj(u):
+> 		- Q += v.friendship
+> 		- if v is not target and v not in common:
+> 			- if common[v] > w:
+> 				- continue
+> 			- common[v] += 1, then
+> 		- else:
+> 			- common[v] = 1
+> 
+> Reduce:
+> - Dijkstra(Map, d)
 
 <div style="page-break-after: always" div></div>
 
