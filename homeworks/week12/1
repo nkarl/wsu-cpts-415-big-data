@@ -11,6 +11,6 @@ def read_input(file):
 
 datafile = 'normal_hly_sample_temperature.csv'
 
-with pd.read_csv(datafile, sep=',', iterator=True) as reader:
+with pd.read_csv(datafile, sep='|', iterator=True) as reader:
     df = reader.get_chunk(24)
-    print(df.loc[:, 'DATE':'HLY-DEWP-NORMAL'])
+    print(df.iloc[:, 4:-1])
