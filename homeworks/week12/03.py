@@ -2,12 +2,15 @@ import pandas as pd
 # from hdfs import InsecureClient
 import os
 import csv
+import sys
+
+def read_input(file):
+    for line in file:
+        yield line
+
 
 datafile = 'normal_hly_sample_temperature.csv'
 
-with open(datafile, 'r') as csvf:
-    datareader = csv.reader(csvf)
-    for row in datareader:
-        print(row)
-
-
+with pd.read_csv(datafile, sep='|', iterator=True) as reader:
+    df = reader.get_chunk(24)
+    print(df)
