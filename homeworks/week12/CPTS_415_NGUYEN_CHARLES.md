@@ -216,5 +216,59 @@ Output the result in the format shown below - the columns are date and the combi
 
 You may write the application in Java, C/C++ or Python language. Provide both source code and compiled code, if applicable, for your program.
 
-#### Solution
-- First, I need to look up the API for Hadoop in Python/C++. 
+> [!Solution]
+```python
+import pandas as pd
+from hdfs import InsecureClient
+import os
+
+client_hdfs = InsecureClient('http://hdfs_ip:50070')
+
+datafile = 'normal_hly_sample_temperature.csv'
+
+with client_hdfs.read('/user/hdfs/' + datafile, encoding = 'utf-8') as reader:
+    i = 0
+    for chunk in pd.read_csv(reader, sep=',', chunksize=24):
+        df    = chunk
+        today = df['DATE'][i].split(' ')[0]
+        temp  = round(df['HLY-TEMP-NORMAL'].sum() / df.shape[0], 2)
+        dew   = round(df['HLY-DEWP-NORMAL'].sum() / df.shape[0], 2)
+        print(f"{today}\t{temp}, {dew}")
+        i += 24
+
+```
+
+Ouput:
+```txt
+20100101        377.04, 285.58
+20100102        378.67, 286.92
+20100103        379.46, 288.25
+20100104        377.75, 286.42
+20100105        375.42, 283.17
+20100106        375.08, 281.79
+20100107        374.46, 281.58
+20100108        371.96, 277.29
+20100109        368.75, 272.58
+20100110        366.29, 269.58
+20100111        364.96, 266.5
+20100112        363.04, 263.08
+20100113        360.42, 260.21
+20100114        357.38, 256.83
+20100115        355.12, 254.25
+20100116        354.75, 253.58
+20100117        355.21, 253.46
+20100118        355.29, 251.67
+20100119        354.71, 249.88
+20100120        353.29, 247.46
+20100121        352.5, 244.75
+20100122        353.79, 246.5
+20100123        356.21, 250.42
+20100124        358.54, 251.88
+20100125        360.92, 253.12
+20100126        363.21, 255.67
+20100127        365.71, 258.46
+20100128        368.58, 261.21
+20100129        369.83, 261.21
+20100130        370.67, 260.88
+20100131        371.75, 261.04
+```
