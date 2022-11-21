@@ -7,13 +7,11 @@ import os
 datafile = 'normal_hly_sample_temperature.csv'
 
 # with client_hdfs.read('/user/hdfs/' + datafile, encoding = 'utf-8') as reader:
-i = 0
-# for chunk in pd.read_csv(reader, sep=',', chunksize=24):
-for chunk in pd.read_csv(datafile, sep=',', chunksize=24):
-        df    = chunk
-        today = df['DATE'][i].split(' ')[0]
-        temp  = round(df['HLY-TEMP-NORMAL'].sum() / df.shape[0], 2)
-        dew   = round(df['HLY-DEWP-NORMAL'].sum() / df.shape[0], 2)
+i=0; DAY=24
+for chunk in pd.read_csv(datafile, sep=',', chunksize=DAY):
+        today = chunk['DATE'][i].split(' ')[0]
+        temp  = round(chunk['HLY-TEMP-NORMAL'].sum() / chunk.shape[0], 2)
+        dew   = round(chunk['HLY-DEWP-NORMAL'].sum() / chunk.shape[0], 2)
         print(f"{today}\t{temp}, {dew}")
-        i += 24
+        i += DAY
 
