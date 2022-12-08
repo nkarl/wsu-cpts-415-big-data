@@ -43,7 +43,7 @@ b. Describe and compare the pros and cons of the three architectures for paralle
 
 <div style="page-break-after: always"></div>
 
-### **2. [ACID vs BASE]: Data Consistency**
+### 2. ACID vs BASE: Data Consistency
 
 #### a. CAP Theorem
 
