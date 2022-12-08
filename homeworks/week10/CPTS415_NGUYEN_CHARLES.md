@@ -2,8 +2,8 @@
 
 ## Charles Nguyen, #011606177
 
-### **1. Parallel Data Model**
-
+### 1. Parallel Data Model
+---
 a. Amdahl's Law.
 
 $$Speedup = \frac{1}{f + \frac{1-f}{s}}$$
@@ -41,10 +41,9 @@ b. Describe and compare the pros and cons of the three architectures for paralle
   - **only queries** are passed through the network
   - theoretically **no upper limit to scalability**
 
-<div style="page-break-after: always"></div>
 
 ### 2. ACID vs BASE: Data Consistency
-
+---
 #### a. CAP Theorem
 
 > A system can have at most 2 out of 3 properties:
@@ -69,8 +68,6 @@ Assumptions:
 - **C**onsistency and **A**vailability (forfeiting **P**)
 
   - data is always available and consistent for one server, but this state is not guaranteed to hold across all three servers, and thus needs to be *replicated and verified* for the other two.
-
-<div style="page-break-after: always"></div>
 
 #### b. Show ACID can be violated using the relation Accounts
 
@@ -98,20 +95,18 @@ A BASE model allows for:
 - approximate answers
 - simpler and faster than ACID
 
-<div style="page-break-after: always"></div>
 
-### **3. Quorum Consensus**
-
+### 3. Quorum Consensus
+---
 **Quorum Concensus** is a voting model to improve fault tolerance and consistency. A quorum is the minimum number of majority votes to win any transaction commit. A quorum must be defined for every system, typically $W + R > N$ where $N$ is the number of servers in the system.
 
 This model contains two sequential operations, **put** and **get**, and a final vote count. A **put** request is sent to multiple servers so that in the case one server fails other servers still hold copies of data. Next, a **get** request is sent to multiple servers containing the redundant data. Finally, the commit is granted if and only if the sum of successful **put** and **get** requests is larger than the total number of servers. 
 
 This model works because it satisfies all ACID properties.
 
-<div style="page-break-after: always"></div>
 
-### **4. Column Store**
-
+### 4. Column Store
+---
 *Column Store* (CS) offers significant speedup over *Row Store* (RS) for some applications.  A column is atomic and pure by virtue of the column label (property). In memory, all rows in a column stored sequentially without being mixed up with other properties like in RS. This means that a columnar dataset pertains purely to that column and do not contain data from other columns (irrelevant data). This also means the fetched data footprint is smaller when loaded.
 
 CS offers support for the following operators:
