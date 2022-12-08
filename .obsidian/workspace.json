@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9fb205cb0d127832",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "homeworks/team-project/Familiarize with Cassandra.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+                "file": "homeworks/team-project/Familiarize with Cassandra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+                "file": "homeworks/team-project/Familiarize with Cassandra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md"
+                "file": "homeworks/team-project/Familiarize with Cassandra.md"
               }
             }
           }
@@ -136,10 +147,13 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f20a4a53c35cfcac",
+  "active": "9fb205cb0d127832",
   "lastOpenFiles": [
-    "homeworks/week12/prompt.hw5.pdf",
+    "Cassandra Architecture.md",
+    "homeworks/team-project/Familiarize with Cassandra.md",
+    "homeworks/team-project/To Do.md",
     "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+    "homeworks/week12/prompt.hw5.pdf",
     "homeworks/week10/CPTS415_NGUYEN_CHARLES.pdf",
     "materials/L10-1 Hadoop.pdf",
     "materials/L9-2 MapReduce II.pdf",
