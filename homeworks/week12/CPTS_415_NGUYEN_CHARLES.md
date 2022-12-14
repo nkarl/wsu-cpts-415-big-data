@@ -64,9 +64,9 @@ def Reduce(potential: dict[str, Person], target: User):
         return []
     else: 
         common: list[Person] = list()
-        for person in potential:
-            if person in target.friendship:
-                common += [potential[person]]
+        for friend in potential:
+            if friend in target.friendship:
+                common += [potential[friend]]
         return common
 
 
@@ -106,7 +106,7 @@ def Map(R: list[list[str]]):
 	ordered_bag = dict(
 			sorted(bag.keys(), key=lambda item: item[1])
 		)
-	return orderd_bag
+	return ordered_bag
 
 def Reduce(ordered_bag: dict[str, int]):
 	"""
