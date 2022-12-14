@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c2feb03ca7c5d208",
+        "id": "33aba3421b713398",
         "type": "tabs",
         "children": [
           {
-            "id": "b0fa00c6df8b58f6",
+            "id": "98d4cdc73b7b6bda",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -136,10 +128,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b0fa00c6df8b58f6",
+  "active": "98d4cdc73b7b6bda",
   "lastOpenFiles": [
-    "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
     "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+    "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
     "homeworks/team-project/Familiarize with Cassandra.md",
     "Cassandra Architecture.md",
     "homeworks/team-project/To Do.md",
