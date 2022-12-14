@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "33aba3421b713398",
+        "id": "d30b53070649a3ae",
         "type": "tabs",
         "children": [
           {
-            "id": "98d4cdc73b7b6bda",
+            "id": "1698168bd74e2bc0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 394.5,
-    "collapsed": true
+    "width": 394.5
   },
   "right": {
     "id": "3d9f2d7f91211303",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -137,10 +128,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "98d4cdc73b7b6bda",
+  "active": "1698168bd74e2bc0",
   "lastOpenFiles": [
-    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
     "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
+    "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
     "homeworks/team-project/Familiarize with Cassandra.md",
     "Cassandra Architecture.md",
     "homeworks/team-project/To Do.md",
