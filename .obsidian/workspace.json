@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d30b53070649a3ae",
+        "id": "24e78270f5edd09e",
         "type": "tabs",
         "children": [
           {
-            "id": "1698168bd74e2bc0",
+            "id": "727b0fb887ea23a9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -128,10 +128,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "1698168bd74e2bc0",
+  "active": "727b0fb887ea23a9",
   "lastOpenFiles": [
-    "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
     "homeworks/week12/CPTS_415_NGUYEN_CHARLES.md",
+    "homeworks/week10/CPTS415_NGUYEN_CHARLES.md",
     "homeworks/team-project/Familiarize with Cassandra.md",
     "Cassandra Architecture.md",
     "homeworks/team-project/To Do.md",
